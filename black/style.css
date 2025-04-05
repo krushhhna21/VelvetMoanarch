@@ -1,0 +1,290 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Fira Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+/* Navigation */
+nav {
+    background-color: #222;
+    color: black;
+    padding: 0.5rem 1rem; /* More compact */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav a.logo {
+    font-size: 1.25rem; /* Reduced from 1.5rem */
+    font-weight: 700;
+    color: white;
+    text-decoration: none;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.875rem; /* Smaller nav links */
+}
+
+.search-input {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+    border-radius: 15px;
+    border: none;
+}
+
+/* Slideshow */
+.slideshow-container {
+    position: relative;
+    width: 80%; /* Reduce width */
+    height: 400px; /* Reduce height */
+    margin: auto; /* Center it */
+    overflow: hidden;
+    border-radius: 15px; /* Optional: Rounded corners */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); /* Optional: Add shadow */
+}
+
+.slider-wrapper {
+    display: flex;
+    width: 700%; /* 7 slides = 7 * 100% */
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    width: 100vw; /* Each slide should take full screen width */
+    flex-shrink: 0;
+}
+
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fits */
+}
+
+/* Dots navigation */
+.dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255,255,255,0.5);
+    cursor: pointer;
+}
+
+.dot.active, .dot:hover {
+    background-color: white;
+}
+
+/* Rest of your existing styles... */
+/* Product Card 2 CSS */
+.product-card {
+    width: 280px;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    position: relative;
+    margin: 15px;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+.product-image {
+    position: relative;
+    height: 320px;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.05);
+}
+
+.quick-view {
+    position: absolute;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    text-align: center;
+    padding: 8px;
+    font-size: 14px;
+    transition: bottom 0.3s ease;
+    cursor: pointer;
+}
+
+.product-card:hover .quick-view {
+    bottom: 0;
+}
+
+.wishlist-icon {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.product-card:hover .wishlist-icon {
+    opacity: 1;
+}
+
+.wishlist-icon.active {
+    color: #ff0000;
+}
+
+.discount-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #ff3e6c;
+    color: white;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.product-details {
+    padding: 15px;
+}
+
+.product-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-category {
+    color: #666;
+    font-size: 13px;
+    margin-bottom: 10px;
+}
+
+.price-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.current-price {
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+}
+
+.original-price {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+
+.stars {
+    color: #ffc107;
+    font-size: 14px;
+}
+
+.review-count {
+    font-size: 12px;
+    color: #666;
+}
+
+.add-to-cart {
+    width: 100%;
+    padding: 10px;
+    background: #000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background: #333;
+}
+
+.size-options {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
+
+.size-options span {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.size-options span:hover {
+    border-color: #000;
+}
+
+.size-options span.selected {
+    background: #000;
+    color: white;
+    border-color: #000;
+}
+
+.hidden {
+    display: none;
+}
